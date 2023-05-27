@@ -20,17 +20,17 @@ const save = () => {
 //삭제 버튼
 /* 
 event.target 속성은 이벤트가 발생한 요소를 나타낸다.
-target속성에서 부모요소 parentElement를 찾아 lielement 변수에 할당.
+target속성에서 부모요소 parentElement를 찾아 target 변수에 할당.
 이벤트가 발생한 요소의 부모요소 parentElement 가져오기.
 */
 const delItem = (event) => {
-  const target = event.target.parentElement;  //lielement의 부모요소는 ul..?
+  const target = event.target.parentElement;  //target의 부모요소는 ul..?
 
   todos = todos.filter((todo) => todo.id != target.id);
   save();
   /* 
   filter메서드는 배열에서 새로운 배열을 생성하는 메서드, 콜백함수 실행, true인 요소들로 새로운 배열 반환
-  todos 배열에서 todo요소의 id와 lielement.id를 비교해서 false인 요소를 필터링한 배열을 todos에 할당
+  todos 배열에서 todo요소의 id와 target.id를 비교해서 false인 요소를 필터링한 배열을 todos에 할당
    */
 
   target.remove();
